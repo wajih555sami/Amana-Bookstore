@@ -81,7 +81,7 @@ const BookListItem: React.FC<BookListItemProps> = ({ book, onAddToCart }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
-      <div className="flex items-center p-4 gap-4">
+      <div className="md:flex items-center p-4 gap-4">
         {/* Book Cover/Icon - Left Side */}
         <Link href={`/book/${book.id}`} className="flex-shrink-0 cursor-pointer">
           <div className="w-16 h-20 bg-gray-200 rounded-md flex items-center justify-center hover:bg-gray-300 transition-colors duration-200">
@@ -91,7 +91,7 @@ const BookListItem: React.FC<BookListItemProps> = ({ book, onAddToCart }) => {
 
         {/* Book Information - Right Side */}
         <div className="flex-1 min-w-0">
-          <div className="flex items-start justify-between gap-4">
+          <div className="md:flex items-start justify-between gap-4">
             {/* Main Info */}
             <div className="flex-1 min-w-0">
               <Link href={`/book/${book.id}`} className="block group cursor-pointer">
@@ -135,7 +135,7 @@ const BookListItem: React.FC<BookListItemProps> = ({ book, onAddToCart }) => {
             </div>
 
             {/* Price and Actions */}
-            <div className="flex flex-col items-end gap-3">
+            <div className="md:flex flex-col items-end gap-3">
               <div className="text-right">
                 <p className="text-xl font-bold text-gray-900">${book.price.toFixed(2)}</p>
                 {book.featured && (
